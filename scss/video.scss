@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}    
+i{
+    font-style: normal;
+}
+li{
+    list-style: none;
+}
+html,body{
+    height: 100%;
+    width: 100%;   
+    text-align: center;
+    overflow: hidden;
+    background: #000;
+}
+//
+//body{
+//  .top{
+//      .Top{
+//          margin: 0 auto;
+//          text-align: center;
+//          margin-top: 100px;
+//          width: 600px;
+//          height: 450px;
+//          background: #FFA500;
+//      }
+//      .Bottom{
+//          background: #ff0;
+//          margin: 100px 0 0 160px;
+//          height: 200px;
+//          width: 340px;
+//          text-align: center;
+//          h2{
+//              font-size: 40px;
+//          }
+//          p:nth-of-type(2){
+//              margin-bottom: 10px;
+//            i.iconfont:nth-child(4){
+//                  float: right;
+//              }
+//              i.iconfont:nth-child(5){
+//                  float: right;
+//              }
+//              i.iconfont:nth-child(6){
+//                  float: right;
+//              }
+//              i:active{
+//                  color: #aaa;
+//              }
+//          }
+//          #time{
+//              margin: 10px  0 0 -215px;
+//              font-size: 12px;
+//          }
+//          .jd .progress{
+//              height: 5px;
+//              .progress-bar{
+//                  background: #22dece;
+//              }
+//          }
+//       }
+// 
+//          
+//          .voice{
+//              background: #ccc;
+//              height: 20px;
+//              width: 50px;
+//              transform-origin: 0,0;
+//              transform: rotate(90deg);
+//              .progress{
+//                  width: 50px;
+//                  height: 3px;
+//                  border: 1px solid #666;
+//              }
+//          } 
+//  }
+//
+//      
+//  .bottom{
+//      width: 1000px;
+//      margin: 0 auto;
+//      margin-top: 30px;
+//      margin-left: 100px;
+//      
+//      li{
+//          list-style: none;
+//          float: left;
+//          height: 80px;
+//          width: 170px;
+//          box-shadow: 2px 3px 6px #333;
+//          border-radius: 8px;
+//          text-align: center;  
+//          margin-right: 30px;
+//          .liTop{
+//              height: 40px;
+//              line-height: 40px;
+//              font-size: 18px;
+//              font-weight: 600; 
+//              background: rgba(255,255,255,0.2);
+//              border-radius: 8px 8px 0 0;   
+//          }
+//          .liBottom{
+//              margin-top: 7px;
+//          }
+//      }
+//      li:hover{
+//          -webkit-filter: blur(1px);
+//      }
+//  }
+//}  
+//
+
+
+html body{
+    background: #000; 
+    .main{
+        margin:0 auto;
+        margin-top: 50px;
+        position: relative;
+        text-align: center;
+        width: 800px;
+        height: 500px;
+        border: 3px solid #999;
+        video{  
+            margin-top: 30px;
+        }
+        aside{
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 3px;
+            background: rgba(255,255,255,0.3);
+            width: 100px;
+            li{
+                height: 60px;
+                width: 80px;
+                margin: 10px;
+                border: 3px solid #fff;
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        footer{
+            display: none;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 50px;
+            i{
+                float: left;
+                margin: 0 8px;
+                font-size: 20px;
+            }
+            i:hover{
+                font-size: 24px;
+            }
+            .jd{
+                float: left;
+                margin: 12px;
+                height: 5px;
+                .progress{
+                    height: 100%;
+                    width: 350px;
+                    margin: 0;
+                    .progress-bar{
+                        background: #22dece;
+                    }
+                }
+            }
+             #time{
+                 float: left;
+                 margin: 7px 3px 0 12px;
+                font-size: 12px;
+            }
+            .sound{
+                float: left;
+                margin: 12px;
+                height: 3px;
+                .progress{
+                    height: 100%;
+                    width: 100px;
+                    margin: 0;
+                    .progress-bar{
+                        background: orange;
+                    }
+                }
+            }
+        }
+    }
+    .main:hover aside{
+        display: block;
+    }
+    .main:hover footer{
+        display: block;
+    }
+}
+  

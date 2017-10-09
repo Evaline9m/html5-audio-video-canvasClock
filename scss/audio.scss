@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+     color: #fff;
+}
+i{
+    font-style: normal;
+}
+html,body{
+    height: 100%;
+    width: 100%;   
+    overflow: hidden;
+}
+
+body{
+    background-image: linear-gradient( 30deg,#bc24b7,#3eb9a4 );
+    
+    .top{
+        margin: 0 auto;
+        margin-top: 80px;
+        width: 1000px;
+        overflow: hidden;
+        .left{
+            float: left;
+            width: 400px;
+            height: 400px;
+            background: url(../img/cd.png) center no-repeat;
+            #bj{
+                height: 200px;
+                width: 200px;
+                border-radius:100% ;
+                background: url(../img/img.jpg) center no-repeat;
+                margin: 100px;
+                background-size: 100% 100%;
+                transform: rotate(0deg);         
+            }
+            img{
+                position: relative; 
+                top: -361px;
+                left: 310px;  
+                transition: all 1s;
+                -webkit-transition: all 1s;
+                transform-origin: 0 0;
+                transform: rotate(-26deg);
+            }
+        }
+        
+        .right{
+            float: left;
+            margin: 100px 0 0 160px;
+            height: 200px;
+            width: 340px;
+            text-align: center;
+            h2{
+                font-size: 40px;
+            }
+            .p{
+                margin-bottom: 10px;
+                overflow: hidden;
+                i.iconfont{
+                    font-size: 28px;
+                    float: left;
+                    margin: 0 5px;
+                }
+                i.iconfont:hover{
+                    color: orange;
+                }
+                i.iconfont:nth-child(4){
+                    float: right;
+                }
+                i.iconfont:nth-child(5){
+                    float: right;
+                }
+                i.icon-yinliang{
+                    margin: 0 0 0 120px;
+                }
+                i:active{
+                    color: #aaa;
+                }
+                div.changesound{
+                    overflow: hidden;
+                }
+               
+                .sound{
+                    display: none;
+                    position: absolute;
+                    margin: 12px;
+                    height: 3px;
+                    transform: translate(118px, -15px) rotate(-90deg);
+                    transform-origin: 0 0;
+                    .progress{
+                        height: 100%;
+                        width: 60px;
+                        margin: 0;
+                        .progress-bar{
+                            background: orange;
+                        }
+                    }
+                }
+            }
+            
+            .voice{
+                background: #ccc;
+                height: 20px;
+                width: 50px;
+                transform-origin: 0,0;
+                transform: rotate(90deg);
+                .progress{
+                    width: 50px;
+                    height: 3px;
+                    border: 1px solid #666;
+                }
+            } 
+            
+            #time{
+                margin: 10px  0 0 -215px;
+                font-size: 12px;
+            }
+            .jd .progress{
+                height: 5px;
+                .progress-bar{
+                    background: #22dece;
+                }
+            }
+        }
+        .right:hover .sound{
+            display: block;
+        }
+    }
+        
+    .bottom{
+        width: 1000px;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-left: 100px;
+        
+        li{
+            list-style: none;
+            float: left;
+            height: 80px;
+            width: 170px;
+            box-shadow: 2px 3px 6px #333;
+            border-radius: 8px;
+            text-align: center;  
+            margin-right: 30px;
+            .liTop{
+                height: 40px;
+                line-height: 40px;
+                font-size: 18px;
+                font-weight: 600; 
+                background: rgba(255,255,255,0.2);
+                border-radius: 8px 8px 0 0;   
+            }
+            .liBottom{
+                margin-top: 7px;
+            }
+        }
+        li:hover{
+            -webkit-filter: blur(1px);
+        }
+    }
+}
+  

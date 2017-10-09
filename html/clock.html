@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+	</head>
+
+	<body>
+		<canvas height='300px' width="300px" style="background: pink;"></canvas>
+	</body>
+	<script>
+		function change() {
+			var canvas = document.getElementsByTagName("canvas")[0];
+			var ctx = canvas.getContext('2d');
+			ctx.clearRect(0,0,300,300);
+			ctx.lineCap = 'round'
+			//表盘
+			ctx.save()
+			ctx.beginPath();
+			ctx.lineWidth = 5;
+			ctx.arc(canvas.width / 2, canvas.height / 2, 100, 0, Math.PI * 2, true);
+			/*渐变*/
+			ctx.strokeStyle = "firebrick";
+			ctx.stroke();
+			ctx.closePath();
+			ctx.restore()
+			//数字	
+			ctx.save()
+			ctx.strokeStyle = '#000'
+			ctx.font = 'italic 18px 微软雅黑'
+			ctx.fillText("12", 140, 72)
+			ctx.fillText("3", 230, 160)
+			ctx.fillText("6", 140, 245)
+			ctx.fillText("9", 55, 160)
+			ctx.restore();
+
+			//刻针
+			ctx.save();
+			ctx.translate(150, 150);
+			for(var i = 0; i < 12; i++) {
+				if(i % 3 != 0) {
+					ctx.beginPath();
+					ctx.lineWidth = 3;
+					ctx.moveTo(80, 0);
+					ctx.lineTo(90, 0);
+					ctx.stroke();
+					ctx.closePath();
+				}
+				ctx.rotate(Math.PI / 6);
+			}
+			ctx.restore();
+
+			//小刻针
+			ctx.save();
+			ctx.translate(150, 150);
+			for(var i = 0; i < 60; i++) {
+				if(i % 5 != 0) {
+					ctx.beginPath();
+					ctx.lineWidth = 2;
+					ctx.moveTo(85, 0);
+					ctx.lineTo(87, 0);
+					ctx.stroke();
+					ctx.closePath();
+				}
+				ctx.rotate(Math.PI / 30);
+			}
+			ctx.restore();
+
+			//指针
+
+			//时针
+			var h = new Date().getHours();
+			h = h <= 12 ? h : h - 12;
+			ctx.save();
+			ctx.beginPath();
+			ctx.translate(150, 150)
+			ctx.rotate((h * Math.PI / 6) - (Math.PI / 2));
+			ctx.moveTo(-10, 0);
+			ctx.lineTo(35, 0);
+			ctx.lineWidth = 7;
+			ctx.stroke();
+			ctx.closePath();
+			ctx.restore();
+
+			//分针
+			ctx.save();
+			ctx.beginPath();
+			ctx.translate(150, 150)
+			ctx.rotate((new Date().getMinutes() * Math.PI / 30) - (Math.PI / 2));
+			ctx.moveTo(-15, 0);
+			ctx.lineTo(60, 0);
+			ctx.lineWidth = 5;
+			ctx.stroke();
+			ctx.closePath();
+			ctx.restore();
+
+			//秒针
+			ctx.save();
+			ctx.beginPath();
+			ctx.translate(150, 150)
+			ctx.rotate((new Date().getSeconds() * Math.PI / 30) - (Math.PI / 2));
+			ctx.moveTo(-20, 0);
+			ctx.lineTo(80, 0);
+			ctx.strokeStyle = "red";
+			ctx.lineWidth = 3;
+			ctx.stroke();
+			ctx.closePath();
+			ctx.restore();
+		}
+		setInterval(change, 1000);
+	</script>
+
+</html>
