@@ -72,12 +72,13 @@ $(document).ready(function() {
 	
 	function Voice(){  //静音
 		if(sound){
+			voice = $("video").eq(0).get(0).volume;
 			$(".sound").find(".progress-bar").width(0);
 			$("video").eq(0).get(0).muted = true;
 			sound = false;
 		}else{
-			$(".sound").find(".progress-bar").width("100%");
 			$("video").eq(0).get(0).muted = false;
+			$(".sound").find(".progress-bar").width( ($("video").eq(0).get(0).volume)*$(".sound").find(".progress").width() );
 			sound = true;
 		}
 	}

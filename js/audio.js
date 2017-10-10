@@ -2,6 +2,7 @@ $(document).ready(function(){
 	var Tim   
 	var star = true;
 	var sound = true;
+	var voice = 1;
 	Deg = true;
 	
 	$(".right").find("i").eq(0).click(function(){
@@ -95,12 +96,13 @@ $(document).ready(function(){
 	
 	function Voice(){  //静音
 		if(sound){
-			$(".right").find("i").eq(5).css("color",'red');
+			voice = $("audio").eq(0).get(0).volume;
+			$(".sound").find(".progress-bar").width(0);
 			$("audio").eq(0).get(0).muted = true;
 			sound = false;
 		}else{
-			$(".right").find("i").eq(5).css("color",'#fff');
 			$("audio").eq(0).get(0).muted = false;
+			$(".sound").find(".progress-bar").width( ($("audio").eq(0).get(0).volume)*$(".sound").find(".progress").width() );
 			sound = true;
 		}
 	}

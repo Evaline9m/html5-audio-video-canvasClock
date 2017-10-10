@@ -82,9 +82,14 @@ body .top .right .p i:active {
   color: #aaa;
 }
 body .top .right .p div.changesound {
-  overflow: hidden;
+  position: absolute;
+  left: 800px;
+  top: 224px;
+  height: 100px;
+  padding-top: 60px;
+  left: 678px;
 }
-body .top .right .p .sound {
+body .top .right .p div.changesound .sound {
   display: none;
   position: absolute;
   margin: 12px;
@@ -92,13 +97,19 @@ body .top .right .p .sound {
   transform: translate(118px, -15px) rotate(-90deg);
   transform-origin: 0 0;
 }
-body .top .right .p .sound .progress {
+body .top .right .p div.changesound .sound .progress {
   height: 100%;
   width: 60px;
   margin: 0;
 }
-body .top .right .p .sound .progress .progress-bar {
+body .top .right .p div.changesound .sound .progress .progress-bar {
   background: orange;
+}
+body .top .right .p div.changesound:hover .sound {
+  display: block;
+}
+body .top .right .p div.changesound:hover i {
+  color: orange;
 }
 body .top .right .voice {
   background: #ccc;
@@ -121,9 +132,6 @@ body .top .right .jd .progress {
 }
 body .top .right .jd .progress .progress-bar {
   background: #22dece;
-}
-body .top .right:hover .sound {
-  display: block;
 }
 body .bottom {
   width: 1000px;

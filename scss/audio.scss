@@ -78,26 +78,37 @@ body{
                     color: #aaa;
                 }
                 div.changesound{
-                    overflow: hidden;
-                }
-               
-                .sound{
-                    display: none;
                     position: absolute;
-                    margin: 12px;
-                    height: 3px;
-                    transform: translate(118px, -15px) rotate(-90deg);
-                    transform-origin: 0 0;
-                    .progress{
-                        height: 100%;
-                        width: 60px;
-                        margin: 0;
-                        .progress-bar{
-                            background: orange;
+                    left: 800px;
+                    top: 224px;
+                    height: 100px;
+                    padding-top: 60px;
+                    left: 678px;
+                    .sound{
+                        display: none;
+                        position: absolute;
+                        margin: 12px;
+                        height: 3px;
+                        transform: translate(118px, -15px) rotate(-90deg);
+                        transform-origin: 0 0;
+                        
+                        .progress{
+                            height: 100%;
+                            width: 60px;
+                            margin: 0;
+                            .progress-bar{
+                                background: orange;
+                            }
                         }
                     }
                 }
-            }
+                div.changesound:hover .sound{
+                    display: block;
+                } 
+                div.changesound:hover i{
+                    color: orange;
+                }   
+            }  
             
             .voice{
                 background: #ccc;
@@ -122,9 +133,6 @@ body{
                     background: #22dece;
                 }
             }
-        }
-        .right:hover .sound{
-            display: block;
         }
     }
         
